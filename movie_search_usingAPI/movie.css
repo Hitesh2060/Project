@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+nav{
+    background-color:#20303C;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.logo{
+    
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    background-color: transparent;
+    background-color: #20303C;
+}
+
+.search_container input, button{
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search_container input{
+    border-radius: 3px 0 0 3px;
+}
+
+.search_container button{
+    border-radius: 0 3px 3px 0;
+    background-color: yellowgreen;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search_container button:hover{
+    background-color: yellow;
+}
+
+.movie_container{
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px #ccc;
+    width: 80%;
+}
+
+.movie_container.noBack{
+    box-shadow: none;
+    background: none;
+    align-items: center;
+}
+
+.movie_poster img{
+    height: 450px;
+    margin-right: 2rem;
+    border-radius: 0.5rem 0 0 0.5rem; 
+}
+
+.movie_info{
+    margin: 3rem 0 0 2rem;
+}
+
+.movie_info h2{
+   font-size: 30px;
+  text-align: center;
+}
+
+.movie_info h2+p{
+     text-align: center;
+}
+
+.movie_info .movie_genre p{
+    background-color:#21303C;
+    color: white;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font: 600;
+}
+
+.movie_info .movie_genre{
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+    overflow-x: auto;
+}
+
+.movie_info p{
+    font-size: 18px;
+    margin-block: 1rem;
+    line-height: 20px;
+}
+
+
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block: 40px;
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+footer{
+     text-align: center; 
+     background-color:#20303C;
+     color: white;
+     padding-block: 20px;
+     margin-top: 40px;
+     font-size: 20px;
+}
+
+@media screen and (max-width:950px) {
+    .movie_container{
+        flex-direction: column;
+    }
+    .movie_poster img{
+       width: 100%;
+       height: auto;
+       margin-right: 0; 
+    }
+}
+
+@media screen and (max-width:600px){
+    .navbar{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        
+    }
+    .search_container{
+        margin-top: 12px;
+    }
+}
